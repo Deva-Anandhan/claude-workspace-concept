@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cover</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;position:relative}
+.serif{font-family:'Source Serif 4',Georgia,serif}
+.shot{position:absolute;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)}
+.shot img{display:block;width:100%}
+.play{display:inline-flex;align-items:center;gap:22px;font-weight:600;font-size:34px}
+.play i{width:92px;height:92px;border-radius:50%;background:#D97757;display:grid;place-items:center;box-shadow:0 10px 40px rgba(217,119,87,.55)}
+.play i::after{content:"";border-left:30px solid #fff;border-top:19px solid transparent;border-bottom:19px solid transparent;margin-left:8px}
+.tag{position:absolute;font-size:20px;letter-spacing:.02em}
+.pill{display:inline-block;font-size:24px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 22px;border-radius:999px}
+
+/* A: dark, ambition hook */
+.a{background:radial-gradient(1200px 800px at 85% 40%,#3a2a22 0%,#1b1a19 55%,#121211 100%);color:#F0EEE6}
+.a .copy{position:absolute;left:110px;top:150px;width:900px;display:flex;flex-direction:column;gap:40px}
+.a .pill{background:rgba(217,119,87,.16);color:#F0A585;border:1px solid rgba(217,119,87,.45)}
+.a h1{font-weight:500;font-size:112px;line-height:1.02;letter-spacing:-.02em}
+.a h1 em{font-style:normal;color:#E58B6C}
+.a p.sub{font-size:36px;line-height:1.35;color:#C9C6BA;max-width:780px}
+.a .s1{width:980px;left:1020px;top:120px;transform:rotate(-4deg)}
+.a .s2{width:760px;left:1180px;top:560px;transform:rotate(3deg)}
+.a .s3{width:560px;left:900px;top:640px;transform:rotate(-2deg)}
+.a .tag{left:110px;bottom:56px;color:#8E8B80}
+
+/* B: cream, bottleneck hook */
+.b{background:#FAF9F5;color:#141413}
+.b .copy{position:absolute;left:110px;top:140px;width:880px;display:flex;flex-direction:column;gap:38px}
+.b .pill{background:#F7E6DE;color:#C6613F}
+.b h1{font-weight:500;font-size:118px;line-height:1.02;letter-spacing:-.02em}
+.b h1 span{display:block}
+.b h1 s{text-decoration-color:#D97757;text-decoration-thickness:8px;color:#A3A196}
+.b p.sub{font-size:36px;line-height:1.35;color:#3D3D3A;max-width:760px}
+.b .play{color:#141413}
+.b .s1{width:1000px;left:1000px;top:110px;transform:rotate(3deg);box-shadow:0 30px 80px rgba(20,20,19,.22),0 0 0 1px #E4E2D8}
+.b .s2{width:720px;left:1080px;top:590px;transform:rotate(-3deg);box-shadow:0 30px 80px rgba(20,20,19,.25),0 0 0 1px #E4E2D8}
+.b .tag{left:110px;bottom:56px;color:#73726C}
+</style>
+</head>
+<body>
+<div id="a" class="a" hidden style="position:absolute;inset:0">
+  <div class="shot s1"><img src="img/article/03-bots.jpg" alt=""></div>
+  <div class="shot s3"><img src="img/article/06-wallet.jpg" alt=""></div>
+  <div class="shot s2"><img src="img/article/02-approval.jpg" alt=""></div>
+  <div class="copy">
+    <span class="pill" style="align-self:flex-start">The future of work</span>
+    <h1 class="serif">One person.<br><em>A whole company.</em></h1>
+    <p class="sub">I built the workspace that could make it possible, with Claude.</p>
+    <span class="play"><i></i>Watch the 2-minute film</span>
+  </div>
+  <span class="tag">An independent concept by Deva Anandhan. Not an Anthropic product.</span>
+</div>
+<div id="b" class="b" hidden style="position:absolute;inset:0">
+  <div class="shot s1"><img src="img/article/03-bots.jpg" alt=""></div>
+  <div class="shot s2"><img src="img/article/02-approval.jpg" alt=""></div>
+  <div class="copy">
+    <span class="pill" style="align-self:flex-start">The future of work</span>
+    <h1 class="serif"><span>The AI isn't</span><span>the bottleneck</span><span>anymore.</span><span style="color:#C6613F">We are.</span></h1>
+    <p class="sub">So I built the workspace that fixes it.</p>
+    <span class="play"><i></i>Watch the 2-minute film</span>
+  </div>
+  <span class="tag">An independent concept by Deva Anandhan. Not an Anthropic product.</span>
+</div>
+<script>document.getElementById((location.hash||'#a').slice(1)).hidden=false</script>
+</body>
+</html>
