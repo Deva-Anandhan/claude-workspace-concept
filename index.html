@@ -3,168 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Claude Workspace: an unofficial concept</title>
-<meta name="description" content="An independent concept: what if a company ran by asking? An agent with its own identity, keys, browser, mail and wallet. Not an Anthropic product.">
+<title>Claude Workspace: a concept by Deva Anandhan</title>
+<meta name="description" content="What if the size of your ambition was no longer limited by the size of the team you can afford? An independent concept by Deva Anandhan for a workspace where you ask, approve, and the work gets done. Not an Anthropic product.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap">
-<style>
-:root{--bg:#FAF9F5;--raised:#FFFFFF;--sunk:#F0EEE6;--ink:#141413;--ink2:#3D3D3A;--ink3:#73726C;--line:#E4E2D8;--accent:#D97757;--accent-d:#C6613F;--accent-s:#F7E6DE;
-  --serif:'Source Serif 4',Georgia,serif;--sans:'Inter',-apple-system,'Segoe UI',system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--bg:#1F1E1D;--raised:#2A2927;--sunk:#262624;--ink:#F0EEE6;--ink2:#D3D0C4;--ink3:#9C9A90;--line:#3A3936;--accent-d:#E58B6C;--accent-s:#3B2A23;color-scheme:dark}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left)) 0 max(20px,env(safe-area-inset-right))}
-h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0;text-wrap:balance}
-h1{font-size:clamp(38px,6vw,64px);line-height:1.08}
-h2{font-size:clamp(26px,3.4vw,36px);line-height:1.2}
-h3{font-size:19px;font-family:var(--sans);font-weight:600;letter-spacing:0}
-p{margin:0}
-a{color:var(--accent-d)}
-.pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--ink2);background:var(--raised)}
-.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
-.mark{font-family:var(--serif);font-size:20px;font-weight:500}
-.note{font-size:12px;color:var(--ink3);border:1px dashed var(--line);border-radius:6px;padding:3px 10px}
-.hero{padding:64px 0 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
-.hero p{max-width:60ch;color:var(--ink2);font-size:18px}
-.btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-block;text-decoration:none;font-weight:500;border-radius:10px;padding:10px 20px;border:1px solid var(--line);background:var(--raised);color:var(--ink)}
-.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--raised);box-shadow:0 16px 48px rgba(20,20,19,.10);position:relative;aspect-ratio:16/10}
-.frame iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
-.frame-cap{text-align:center;color:var(--ink3);font-size:13px;margin-top:10px}
-section{padding:56px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:20px}
-section>p,section li{max-width:68ch;color:var(--ink2)}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-d)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.card{background:var(--raised);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
-.card p{color:var(--ink2);font-size:15px}
-ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
-.scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px}
-th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:600;text-align:left}
-th,td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-td b{font-weight:600}
-.big{font-family:var(--serif);font-size:clamp(24px,3vw,32px);line-height:1.3;max-width:26ch}
-video{width:100%;border-radius:16px;border:1px solid var(--line);background:#000;display:block}
-footer{padding:36px 0 56px;border-top:1px solid var(--line);color:var(--ink3);font-size:13.5px;display:flex;flex-direction:column;gap:8px}
-@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}.hero{padding:40px 0 28px}section{padding:40px 0}}
-</style>
+<link rel="stylesheet" href="css/site.css?v=2">
 </head>
 <body>
 <div class="wrap">
-  <header class="top"><span class="mark">Claude Workspace</span><span class="note">Unofficial concept. Not an Anthropic product.</span></header>
+  <header class="top"><a class="mark" href="./">Claude Workspace</a>
+    <nav class="nav" aria-label="Site"><a href="./" aria-current="page">Home</a><a href="essay.html">Essay</a><a href="#film">Film</a><a href="app/">App</a><a href="https://github.com/Deva-Anandhan/claude-workspace-concept">GitHub</a></nav></header>
 
-  <div class="hero">
-    <span class="pill">An independent concept</span>
-    <h1>What if a company ran by asking?</h1>
-    <p>AI can already write the software. What it still cannot do alone is sign in, hold a key, read the mail, or pay. This concept imagines Claude with all of those built in, so a person asks, approves, and the work gets done.</p>
-    <div class="btns"><a class="btn primary" href="app/">Open the clickable app</a><a class="btn" href="#film">Watch the film</a><a class="btn" href="#idea">Read the idea</a></div>
+  <div style="padding:56px 0 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
+    <span class="pill">An independent concept by Deva Anandhan</span>
+    <h1 style="max-width:17ch">What if your ambition wasn't limited by the team you can afford?</h1>
+    <p class="lead">AI can already think, plan and build. Claude Workspace is my concept of what comes next: one place where you ask, approve, and the work gets done, with you in control.</p>
+    <div class="btns" style="justify-content:center"><a class="btn primary" href="#film">Watch the film</a><a class="btn" href="essay.html">Read the essay</a><a class="btn" href="app/">Open the app</a></div>
   </div>
 
-  <div class="frame" id="frame"><iframe src="app/" title="Claude Workspace concept, live preview" loading="lazy" tabindex="-1"></iframe></div>
-  <p class="frame-cap">A live preview of the concept app. Open it full screen to click through Chat, Mail, Bots, Browser and Settings. It is designed for a desktop-width window.</p>
+  <div id="film" style="scroll-margin-top:16px"><video controls preload="metadata" playsinline poster="film/poster.jpg" src="film/claude-workspace-film.mp4" aria-label="Claude Workspace concept film, two minutes, with narration"></video>
+    <p class="fig-cap" style="margin-top:10px">Two minutes, with narration and music. A concept film, not an Anthropic product.</p></div>
 
-  <section id="idea">
-    <span class="eyebrow">The observation</span>
-    <h2>Building got cheap. Everything around it did not.</h2>
-    <p>A CRM, an automation or an internal tool that once needed a team and a stack of paid software can now be written by an AI in hours. The scarce thing is no longer the code.</p>
-    <p>But today every AI agent is a guest in someone else's house. It browses in another company's browser, signs in through another company's login, reads work in another company's mail and chat, and cannot buy anything. At each of those points a person has to step in: buy the subscription, create the account, paste a token, pass along the message.</p>
-    <p class="big">The person is the glue. This concept removes the glue.</p>
-  </section>
-
-  <section>
-    <span class="eyebrow">The pieces</span>
-    <h2>Six things an agent needs to finish a job</h2>
-    <div class="grid">
-      <div class="card"><h3>Claude Browser</h3><p>A full browser where bots work in their own tabs, as themselves. You can watch, and take over at any moment.</p></div>
-      <div class="card"><h3>Claude Auth</h3><p>An identity for every bot, with a role and scoped access, so apps are authorised directly.</p></div>
-      <div class="card"><h3>Claude Vault</h3><p>Credentials a bot can use but never read. No more pasting tokens into a chat.</p></div>
-      <div class="card"><h3>Claude Mail and Chat</h3><p>Where work arrives and gets reported. Bots sort the inbox, draft replies and pick up requests.</p></div>
-      <div class="card"><h3>Claude Pay</h3><p>A funded wallet with budgets and limits. A bot quotes, you approve, and it pays inside the rules.</p></div>
-      <div class="card"><h3>Claude Bots</h3><p>Persistent teammates with a role, an owner and a budget, working side by side all day.</p></div>
+  <section class="sec">
+    <div class="two" style="align-items:center">
+      <div class="sec-head"><span class="eyebrow">Why I made this</span><h2>It started with a question I couldn't shake</h2></div>
+      <div class="prose" style="font-size:17px">
+        <p>I'm a GTM Engineer, and I use Claude almost every day to build automations, connect systems and try ideas I wouldn't have attempted alone.</p>
+        <p>Over time I noticed something. If Claude is where I think, plan and build, why does finishing the work still depend on a dozen other apps, each with its own logins, keys and rules?</p>
+        <p><a href="essay.html">Read the full essay →</a></p>
+      </div>
     </div>
-    <p>Underneath all six sits one more layer: consent and policy. It records what each bot may access, spend and send, who approved it and when. Money moves only inside an approval a person gave.</p>
   </section>
 
-  <section>
-    <span class="eyebrow">How it works</span>
-    <h2>Ask. Approve. Done.</h2>
-    <ol>
-      <li>Someone asks in chat or mail: fix this contract, renew that subscription, set up the new hire.</li>
-      <li>A bot picks it up, signs in as itself, and uses keys it never sees.</li>
-      <li>It does the work in its own browser session, in the tools the company already has.</li>
-      <li>When it reaches a limit you set, such as a discount, a purchase or a release, it stops and asks.</li>
-      <li>You approve with one tap. It finishes, pays if needed, and reports back.</li>
-      <li>Every step is on the record.</li>
-    </ol>
-  </section>
-
-  <section>
-    <span class="eyebrow">What changes</span>
-    <h2>Work stops waiting for people to be free</h2>
-    <div class="scroll"><table>
-      <thead><tr><th>Today</th><th>By asking</th></tr></thead>
-      <tbody>
-        <tr><td>A request goes into a queue or ticket</td><td>A request is a message to a bot</td></tr>
-        <tr><td>Work waits for a person to be free</td><td>Work starts at once, at any hour</td></tr>
-        <tr><td>One person does one task at a time</td><td>Many bots work in parallel</td></tr>
-        <tr><td>The process lives in documents and heads</td><td>The process is what the bots are told to do</td></tr>
-        <tr><td>Status is asked for in meetings</td><td>Status is in the log</td></tr>
-      </tbody></table></div>
-    <p>For an individual, this is the bigger change. A good idea used to need money to hire the people who would execute it. If execution costs a subscription and a wallet budget, the filter on who gets to build shifts from who has capital to who has ideas and judgment.</p>
-  </section>
-
-  <section>
-    <span class="eyebrow">The contest</span>
-    <h2>This is about the layer where work happens</h2>
-    <p>Each era of computing was won by whoever owned the default place where work gets done. Today that is the browser, mail, identity and documents, built for a person looking at a screen. When an agent does the work, nobody opens those screens, and whoever the agent belongs to becomes the interface.</p>
-    <div class="scroll"><table>
-      <thead><tr><th>Job in a company</th><th>Built for people today</th><th>In this concept</th></tr></thead>
-      <tbody>
-        <tr><td>Browser</td><td>A browser you drive</td><td><b>Claude Browser</b>, shared with bots</td></tr>
-        <tr><td>Sign-in and identity</td><td>A login for each person</td><td><b>Claude Auth</b>, an identity for each bot</td></tr>
-        <tr><td>Mail and chat</td><td>An inbox you read</td><td><b>Claude Mail and Chat</b>, a work queue bots act on</td></tr>
-        <tr><td>Passwords and keys</td><td>A password manager you open</td><td><b>Claude Vault</b>, used but never seen</td></tr>
-        <tr><td>Payments</td><td>A card you type in</td><td><b>Claude Pay</b>, budgets and limits</td></tr>
-        <tr><td>Assistant</td><td>A helper beside the work</td><td><b>Claude Bots</b>, doing the work</td></tr>
-      </tbody></table></div>
-  </section>
-
-  <section>
-    <span class="eyebrow">What has to be solved</span>
-    <h2>The hard parts are trust, not software</h2>
-    <p>An agent that holds keys and money must not be tricked by what it reads, and someone has to be clearly responsible when it spends wrongly. That is why every sensitive step in this concept runs through a limit and an approval, why secrets are never shown to the model, and why everything is logged. Whoever earns that trust earns the layer.</p>
-  </section>
-
-  <section id="film">
-    <span class="eyebrow">The film</span>
-    <h2>Two minutes, start to finish</h2>
-    <video controls preload="metadata" src="film/claude-workspace-film.mp4"></video>
-  </section>
-
-  <section>
-    <span class="eyebrow">Try it</span>
-    <h2>What is in the demo</h2>
-    <div class="grid">
-      <div class="card"><h3>Chat</h3><p>Ask for something and watch a bot work through it, then approve the step it stops on.</p></div>
-      <div class="card"><h3>Mail</h3><p>A full mail client with a sorted inbox, bot-drafted replies and compose.</p></div>
-      <div class="card"><h3>Bots</h3><p>Eight bot sessions with their steps, tasks, permissions and setup.</p></div>
-      <div class="card"><h3>Browser</h3><p>Tabs for you and for bots, take over, vault sign-in and paying at checkout.</p></div>
-      <div class="card"><h3>Settings</h3><p>Wallet and billing, identity, vault, policies and the audit log.</p></div>
-      <div class="card"><h3>Approvals</h3><p>The bell in the top bar collects everything waiting for a person.</p></div>
+  <section class="sec">
+    <div class="sec-head"><span class="eyebrow">The idea</span><h2>Ask. Approve. Done.</h2><p class="lead">Agents get what they need to finish a job, and people keep the decisions that matter.</p></div>
+    <div class="loop">
+      <div class="st"><span class="big">Ask</span><p class="ink2">In chat or mail: fix this contract, renew that tool, set up the new hire.</p></div>
+      <div class="st mid"><span class="big">Approve</span><p class="ink2">An agent does the work and stops at the limits you set: a discount, a purchase, a release.</p></div>
+      <div class="st"><span class="big">Done</span><p class="ink2">It finishes, reports back, and every step is on the record.</p></div>
     </div>
-    <div class="btns" style="justify-content:flex-start"><a class="btn primary" href="app/">Open the app</a></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><span class="eyebrow">How it fits together</span><h2>Three layers, and control matters most</h2><p class="lead">Claude decides what should happen. A separate control layer decides what it's allowed to do.</p></div>
+    <div class="layers">
+      <div class="layer"><span class="name">Intelligence</span><span class="q">What should happen?</span><span class="what">Understanding intent, planning, memory, coordinating agents</span></div>
+      <div class="layer ctl"><span class="name">Control</span><span class="q">What is it allowed to do?</span><span class="what">Identity, permissions, credentials, spending limits, approvals, audit</span></div>
+      <div class="layer"><span class="name">Execution</span><span class="q">How does it get done?</span><span class="what">APIs, MCP, browser, mail, files, code, deployment</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><span class="eyebrow">In the demo</span><h2>Six problems, six answers you can click</h2><p class="lead">Each comes from something I run into building automations. Each opens the part of the demo that answers it.</p></div>
+    <div class="three">
+      <div class="bn"><span class="eyebrow">Identity</span><p class="ask">Every agent has its own badge.</p><p class="idea">Scoped permissions and a name on every action.</p><a class="see" href="app/#settings-identity">See it in the demo →</a></div>
+      <div class="bn"><span class="eyebrow">Credentials</span><p class="ask">Keys used, never seen.</p><p class="idea">A vault that lends agents access without showing the model the secret.</p><a class="see" href="app/#settings-vault">See it in the demo →</a></div>
+      <div class="bn"><span class="eyebrow">Browser</span><p class="ask">Agents browse as themselves.</p><p class="idea">Their own tabs, and you can take over at any moment.</p><a class="see" href="app/#browser-procurement-bot">See it in the demo →</a></div>
+      <div class="bn"><span class="eyebrow">Communication</span><p class="ask">Mail that becomes work.</p><p class="idea">Sorted on arrival, with replies drafted and waiting for you.</p><a class="see" href="app/#mail">See it in the demo →</a></div>
+      <div class="bn"><span class="eyebrow">Procurement</span><p class="ask">Pay inside your limits.</p><p class="idea">Budgets, per-purchase limits and a ledger of who allowed what.</p><a class="see" href="app/#settings-wallet">See it in the demo →</a></div>
+      <div class="bn"><span class="eyebrow">Coordination</span><p class="ask">Agents that work as a team.</p><p class="idea">Roles, owners and shared context, with approvals when it matters.</p><a class="see" href="app/#bots-automation-bot">See it in the demo →</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><span class="eyebrow">Try it</span><h2>The workspace, live</h2><p class="lead">A clickable front-end concept. Best on a desktop-width screen.</p></div>
+    <div class="frame" id="frame"><iframe src="app/" title="Claude Workspace concept, live preview" loading="lazy" tabindex="-1"></iframe></div>
+    <div class="btns"><a class="btn primary" href="app/">Open the app full screen</a></div>
+  </section>
+
+  <section class="sec">
+    <div class="two">
+      <div class="sec-head"><span class="eyebrow">Open questions</span><h2>What I don't know yet</h2><p class="lead">These are the questions I find most interesting, and I'd value other views on them.</p></div>
+      <ul class="qs">
+        <li>How should agents authenticate to apps designed for humans?</li>
+        <li>How should credentials be brokered across different vendors?</li>
+        <li>How reliable can browser execution get where no API exists?</li>
+        <li>Who is responsible when an agent spends money by mistake?</li>
+        <li>How does a person stay meaningfully in control as agents get faster?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" style="align-items:center;text-align:center">
+    <p class="quote" style="border:0;padding:0;max-width:24ch">Maybe the future of work isn't more applications. It's more people able to build something real.</p>
+    <div class="author" style="justify-content:center"><span class="avatar" aria-hidden="true">DA</span><div style="text-align:left"><div style="font-weight:600">Deva Anandhan</div><div class="mute" style="font-size:14px">GTM Engineer · building with Claude</div></div></div>
+    <div class="btns" style="justify-content:center"><a class="btn primary" href="https://github.com/Deva-Anandhan/claude-workspace-concept/issues">Tell me where I'm wrong</a><a class="btn" href="essay.html">Read the essay</a></div>
   </section>
 
   <footer>
-    <p>This is an independent concept and thought experiment. It is not made, endorsed or announced by Anthropic, and none of the products shown here exist. Claude is a trademark of Anthropic.</p>
-    <p>Larkfield and every person, vendor, price and message in the demo are invented. Nothing in it is connected to real accounts or real money, and its AI responses are scripted.</p>
-    <p>The concept, app and film were made with Claude.</p>
+    <p>An independent concept and thought experiment. It is not made, endorsed or announced by Anthropic, and the products shown do not exist. Claude is a trademark of Anthropic.</p>
+    <p>The demo's company, people, vendors and figures are invented, nothing in it touches real accounts or money, and its AI responses are scripted. Made with Claude.</p>
   </footer>
 </div>
 <script>
 (function(){var f=document.getElementById('frame'),i=f.querySelector('iframe');
-function fit(){var s=f.clientWidth/1440;i.style.transform='scale('+s+')';f.style.aspectRatio='auto';f.style.height=(900*s)+'px'}
+function fit(){var s=f.clientWidth/1440;i.style.transform='scale('+s+')';f.style.height=(900*s)+'px'}
 fit();window.addEventListener('resize',fit)})();
 </script>
 </body>

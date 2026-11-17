@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What if Claude could change the way we work? | Deva Anandhan</title>
+<meta name="description" content="An essay by Deva Anandhan on a workspace built around how AI actually works: identity, keys, browser, mail, payments and agents, with people in control. An independent concept, not an Anthropic product.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap">
+<link rel="stylesheet" href="css/site.css?v=2">
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="mark" href="./">Claude Workspace</a>
+    <nav class="nav" aria-label="Site"><a href="./">Home</a><a href="essay.html" aria-current="page">Essay</a><a href="./#film">Film</a><a href="app/">App</a><a href="https://github.com/Deva-Anandhan/claude-workspace-concept">GitHub</a></nav></header>
+
+  <article class="narrow" style="padding:40px 0 24px;display:flex;flex-direction:column;gap:26px">
+    <div class="col" style="display:flex;flex-direction:column;gap:16px">
+      <span class="eyebrow">Essay</span>
+      <h1 style="font-size:clamp(34px,5vw,52px)">What if Claude could change the way we work?</h1>
+      <p class="lead">It started with using Claude every day. It turned into a concept for a different way of working.</p>
+      <div class="author"><span class="avatar" aria-hidden="true">DA</span><div><div style="font-weight:600">Deva Anandhan</div><div class="mute" style="font-size:14px">GTM Engineer · November 2026 · 5 min read</div></div></div>
+    </div>
+
+    <div class="prose">
+      <p>I'm a GTM Engineer. Most of my time goes into building automations, connecting systems and solving the small technical problems that sit between them. Claude is part of nearly all of it: code, integrations, research, workflows, and ideas I wouldn't have attempted on my own.</p>
+      <p>Often a simple conversation turns into something I can actually build. Somewhere along the way I realised I wasn't just using Claude to work faster. It was changing how I approach work. Which left me with a question I couldn't shake:</p>
+      <p class="quote">If Claude is where I think, plan and build, why does finishing the work still depend on a dozen other applications?</p>
+
+      <h2>We made AI capable. We haven't rebuilt work around it.</h2>
+      <p>Even when Claude understands exactly what I want, getting it done means logins, permissions, API keys, and copying things from one place to another. A workflow that looks simple on paper gets complicated because every app has its own rules.</p>
+    </div>
+
+    <figure class="fig" aria-label="Today, the person connects every app by hand. In a workspace, Claude coordinates the apps through a control layer.">
+      <div class="two">
+        <div class="panel hub"><span class="panel-label">Today</span>
+          <svg viewBox="0 0 400 260" role="img" aria-label="You in the middle, connected by hand to eight separate apps">
+            <path class="ln" d="M200 130L350 130M200 130L306 197M200 130L200 225M200 130L94 197M200 130L50 130M200 130L94 63M200 130L200 35M200 130L306 63"/>
+            <g><rect class="nd" x="310" y="115" width="80" height="30" rx="8"/><text class="t" x="350" y="134" text-anchor="middle">Mail</text></g>
+            <g><rect class="nd" x="266" y="182" width="80" height="30" rx="8"/><text class="t" x="306" y="201" text-anchor="middle">Chat</text></g>
+            <g><rect class="nd" x="160" y="210" width="80" height="30" rx="8"/><text class="t" x="200" y="229" text-anchor="middle">Browser</text></g>
+            <g><rect class="nd" x="54" y="182" width="80" height="30" rx="8"/><text class="t" x="94" y="201" text-anchor="middle">CRM</text></g>
+            <g><rect class="nd" x="10" y="115" width="80" height="30" rx="8"/><text class="t" x="50" y="134" text-anchor="middle">Docs</text></g>
+            <g><rect class="nd" x="54" y="48" width="80" height="30" rx="8"/><text class="t" x="94" y="67" text-anchor="middle">Code</text></g>
+            <g><rect class="nd" x="160" y="20" width="80" height="30" rx="8"/><text class="t" x="200" y="39" text-anchor="middle">Billing</text></g>
+            <g><rect class="nd" x="266" y="48" width="80" height="30" rx="8"/><text class="t" x="306" y="67" text-anchor="middle">API keys</text></g>
+            <circle class="me" cx="200" cy="130" r="32"/><text class="tme" x="200" y="135" text-anchor="middle">You</text>
+          </svg>
+          <p class="mute" style="font-size:14px;text-align:center">You are the glue: logins, tokens, copy and paste, follow-ups.</p>
+        </div>
+        <div class="panel"><span class="panel-label">With a workspace</span>
+          <div class="flow">
+            <span class="you">You</span><span class="arrow" aria-hidden="true">↓ ask, approve</span>
+            <div class="box"><b>Claude</b><span>understands, plans, coordinates agents</span></div><span class="arrow" aria-hidden="true">↓</span>
+            <div class="box ctl"><b>Control layer</b><span>identity, keys, limits, approvals, audit</span></div><span class="arrow" aria-hidden="true">↓</span>
+            <div class="apps"><span class="chip">Mail</span><span class="chip">Chat</span><span class="chip">Browser</span><span class="chip">CRM</span><span class="chip">Docs</span><span class="chip">Code</span><span class="chip">Billing</span></div>
+          </div>
+          <p class="mute" style="font-size:14px;text-align:center">The same apps, coordinated for you. You decide.</p>
+        </div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>To be clear, I'm not suggesting Anthropic rebuild Gmail, Salesforce or GitHub. Those products, their APIs and MCP all stay. The difference I care about is between <strong>an assistant that connects to many apps</strong> and <strong>a workspace that manages the whole life of a piece of work across them.</strong></p>
+
+      <h2>Six walls I keep running into</h2>
+      <p>Building automations every day, I hit the same problems. Each one is a design question for a workspace like this.</p>
+    </div>
+
+    <figure class="fig" aria-label="Six bottlenecks and what I imagine for each">
+      <div class="two">
+        <div class="bn"><span class="eyebrow">Identity</span><p class="ask">Should every agent inherit my whole account?</p><p class="idea"><b>Imagine:</b> each agent has its own identity, scoped permissions, and a name on every action.</p></div>
+        <div class="bn"><span class="eyebrow">Credentials</span><p class="ask">Keys and tokens are scattered across every tool.</p><p class="idea"><b>Imagine:</b> a vault that lets agents use a secret without the model ever seeing it. Limited, logged, revocable.</p></div>
+        <div class="bn"><span class="eyebrow">Browser</span><p class="ask">Not everything has an API, and browser automation breaks.</p><p class="idea"><b>Imagine:</b> a browser built for agents, with task context and recovery. APIs and MCP first, the browser where they run out.</p></div>
+        <div class="bn"><span class="eyebrow">Communication</span><p class="ask">The request arrives in one app and the work happens in five others.</p><p class="idea"><b>Imagine:</b> an email becomes research, a proposal, a CRM update and a drafted reply, in one thread.</p></div>
+        <div class="bn"><span class="eyebrow">Procurement</span><p class="ask">Claude can plan the stack but can't buy it.</p><p class="idea"><b>Imagine:</b> a costed plan you approve, paid through real providers, inside spending limits, with a full trail.</p></div>
+        <div class="bn"><span class="eyebrow">Coordination</span><p class="ask">Many agents aren't an organisation.</p><p class="idea"><b>Imagine:</b> agents with roles, owners, shared context, boundaries and outcomes you can measure.</p></div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <h2>What one person could build</h2>
+      <p>This is the part that excites me most. Imagine a founder with an idea and no team, opening Claude and typing:</p>
+    </div>
+
+    <figure class="fig" aria-label="One request fans out to specialised agents, stops for approval, and ends in a launch">
+      <div class="panel">
+        <div class="prompt"><small>You</small>Build a SaaS product for small businesses. Research the market, define it, build and test an MVP, and get it ready to launch. Keep infrastructure under $100 a month.</div>
+        <div class="pipe">
+          <span class="step">Research<span>the market</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step">Product<span>the requirements</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step">Engineering<span>the MVP</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step">QA<span>the tests</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step">Infrastructure<span>the costs</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step gate">Your approval<span>$86 a month</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step">Marketing<span>the launch</span></span><span class="to" aria-hidden="true">→</span>
+          <span class="step done">Live<span>and supported</span></span>
+        </div>
+      </div>
+      <figcaption class="fig-cap">Every task, decision, cost and failure in one place.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p>You aren't moving between apps. You're directing the work.</p>
+      <p>This doesn't make people unnecessary. Judgment, relationships and taste still matter most. But the distance between having an idea and building it could shrink dramatically, and that matters most for the people who can't afford a team today: freelancers, creators, small businesses and first-time founders.</p>
+      <p class="quote">What if the size of your ambition was no longer limited by the size of the team you can afford?</p>
+
+      <h2>Three layers, and why control matters most</h2>
+    </div>
+
+    <figure class="fig" aria-label="Three layers: intelligence, control and execution">
+      <div class="layers">
+        <div class="layer"><span class="name">Intelligence</span><span class="q">What should happen?</span><span class="what">Understanding intent, planning, memory, coordinating agents</span></div>
+        <div class="layer ctl"><span class="name">Control</span><span class="q">What is it allowed to do?</span><span class="what">Identity, permissions, credentials, spending limits, approvals, audit</span></div>
+        <div class="layer"><span class="name">Execution</span><span class="q">How does it get done?</span><span class="what">APIs, MCP, browser, mail, files, code, deployment</span></div>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Claude should understand what needs to happen. The control layer should decide what it's actually allowed to do. Keeping those two separate is, to me, the most important part of the whole idea. A workspace that can act on your behalf has to be one you can trust: limits you set, approvals you give, and a record of everything.</p>
+
+      <h2>What I built</h2>
+      <p>I didn't want this to stay a note on my laptop, so I built a front-end concept: Chat, Mail, Bots, Browser and Settings, plus a two-minute film. It's an independent project and the interactions are scripted, but building it moved me from imagining the experience to thinking about how it would be structured.</p>
+      <div class="btns"><a class="btn primary" href="app/">Open the app</a><a class="btn" href="./#film">Watch the film</a><a class="btn" href="https://github.com/Deva-Anandhan/claude-workspace-concept">See the code</a></div>
+
+      <h2>Why this connects to Anthropic</h2>
+      <p>I believe technology should expand what people can do, not just make old processes slightly faster. Anthropic's aim of AI that is capable, reliable, interpretable and steerable is the bar a workspace like this would have to meet. Something that can sign in to your systems and spend your money needs safety and human oversight as requirements, not afterthoughts.</p>
+      <p>I don't want to watch this shift happen. I want to help build it.</p>
+
+      <h2>What I don't know yet</h2>
+      <ul class="qs">
+        <li>How should agents authenticate to apps designed for humans?</li>
+        <li>How should credentials be brokered across different vendors?</li>
+        <li>How reliable can browser execution get where no API exists?</li>
+        <li>Who is responsible when an agent spends money by mistake?</li>
+        <li>How does a person stay meaningfully in control as agents get faster?</li>
+      </ul>
+
+      <p>Maybe the future of work isn't more applications. Maybe it's more people able to build something real with what they already have.</p>
+      <p>I'd love to hear where you think I'm wrong. <a href="https://github.com/Deva-Anandhan/claude-workspace-concept/issues">Start a discussion on GitHub</a>.</p>
+      <p class="sign">Deva Anandhan</p>
+    </div>
+  </article>
+
+  <footer class="narrow">
+    <p>An independent concept and thought experiment. It is not made, endorsed or announced by Anthropic, and the products shown do not exist. Claude is a trademark of Anthropic.</p>
+    <p>The demo's company, people, vendors and figures are invented, and its AI responses are scripted.</p>
+  </footer>
+</div>
+</body>
+</html>
