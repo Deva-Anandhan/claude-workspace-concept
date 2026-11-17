@@ -126,10 +126,13 @@ CW.go=(mode,sub)=>{CW.closeMenu();CW.mode=mode;CW.sub=sub||null;
   const root=document.getElementById('view'),v=CW.views[mode];root.innerHTML='';
   if(v){try{v.render(root,CW.sub)}catch(err){console.error(err);root.innerHTML=`<div class="empty">${CW.icon('alert',22)}<div>This screen failed to load.</div><div class="t-xs t-mono">${CW.esc(err.message)}</div></div>`}}
   else root.innerHTML=`<div class="empty">${CW.icon('info',22)}<div>This screen is not built yet.</div></div>`;
-  try{history.replaceState(null,'','#'+mode+(sub?'-'+sub:''))}catch(e){}};
+  const hash='#'+mode+(sub?'-'+sub:'');
+  try{if(location.hash===hash||CW._fromHistory||!CW._booted)history.replaceState(null,'',hash);else history.pushState(null,'',hash)}catch(e){}};
+function fromHash(){const h=location.hash.slice(1),i=h.indexOf('-'),mode=i>0?h.slice(0,i):h,sub=i>0?h.slice(i+1):null;
+  CW._fromHistory=true;try{CW.go(CW.views[mode]?mode:'chat',CW.views[mode]?sub:null)}finally{CW._fromHistory=false}}
 CW.boot=()=>{try{const t=localStorage.getItem('cw-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
   shell();if(document.documentElement.dataset.theme==='dark')document.getElementById('theme').innerHTML=CW.icon('sun',16);
-  const h=location.hash.slice(1),i=h.indexOf('-'),mode=i>0?h.slice(0,i):h,sub=i>0?h.slice(i+1):null;
-  CW.go(CW.views[mode]||mode==='settings'?mode:'chat',sub);
+  fromHash();CW._booted=true;
+  window.addEventListener('popstate',()=>{CW.closeModal();const p=document.getElementById('pop');if(p)p.remove();fromHash()});
   document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();palette()}if(e.key==='Escape'){CW.closeModal();CW.closeMenu();const p=document.getElementById('pop');if(p)p.remove()}})};
 })();
