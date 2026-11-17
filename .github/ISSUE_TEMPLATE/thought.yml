@@ -1,0 +1,31 @@
+name: Drop your thoughts
+description: Share what you think about Claude Workspace. It appears on the website straight away.
+title: "Thought from a reader"
+labels: ["thought"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Your name and your thought will be shown publicly on the Claude Workspace concept site as soon as you submit.
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+      description: Shown next to your thought on the website.
+      placeholder: Jane Doe
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: What you do (optional)
+      placeholder: Product designer at a startup
+    validations:
+      required: false
+  - type: textarea
+    id: thought
+    attributes:
+      label: Your thought
+      description: Agree, disagree, add an idea. A few sentences is perfect.
+    validations:
+      required: true
